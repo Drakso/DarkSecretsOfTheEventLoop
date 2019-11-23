@@ -259,4 +259,8 @@ ${order.description === undefined ? "No description" : order.description}`);
 * [System for visualizing javascript ( a bit older version but it works with ES5 )](http://latentflip.com/loupe)
 
 ## Special thanks 🎈
-Special thanks to Jovana Shishkovska for the amazing designs and Dime Gjorgjievski for the super awesome animations. Without them, this readme and the presentation would not be as nearly as awesome! 
+Special thanks to: 
+* **Jovana Shishkovska** for the amazing designs
+* **Dime Gjorgjievski** for the super awesome animations
+
+Without them, this readme and the presentation would not be as nearly as awesome! 

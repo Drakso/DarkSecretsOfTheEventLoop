@@ -257,3 +257,6 @@ ${order.description === undefined ? "No description" : order.description}`);
 * [html.spec apis](https://html.spec.whatwg.org/dev/webappapis.html#webappapis)
 * [html.spec event loops](https://html.spec.whatwg.org/multipage/webappapis.html#event-loops)
 * [System for visualizing javascript ( a bit older version but it works with ES5 )](http://latentflip.com/loupe)
+
+## Special thanks 🎈
+Special thanks to Jovana Shishkovska for the amazing designs and Dime Gjorgjievski for the super awesome animations. Without them, this readme and the presentation would not be as nearly as awesome! 

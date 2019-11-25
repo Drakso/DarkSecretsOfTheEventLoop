@@ -4,8 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 })
 
+// generates a random number from zero to the number parameter, exclusive
 const randTo = (number) => (Math.random() * number) | 0;
 
+// a quick and dirty generator for a random permutation of three elements
 const getOrder = () => {
     const index = randTo(6);
     return [
@@ -18,6 +20,8 @@ const getOrder = () => {
     ][index];
 }
 
+// generates fnames.length * lnames.lenght people (400.000 objects)
+// the objects are created in one call, and have predictable property order
 const getNicePeople = () => {
     const label = "Generating nice people";
     console.time(label);
@@ -36,6 +40,8 @@ const getNicePeople = () => {
     return persons;
 }
 
+// generates fnames.length * lnames.lenght people (400.000 objects)
+// the objects are created piecemeal, and have random property order
 const getBadPeople = () => {
     const label = "Generating bad people";
     console.time(label);
@@ -58,6 +64,8 @@ const getBadPeople = () => {
     return persons;
 }
 
+// generates fnames.length * lnames.lenght people (400.000 objects)
+// the objects are created piecemeal, and have random property order AND random property names
 const getAwfulPeople = () => {
     const label = "Generating awful people";
     console.time(label);
@@ -87,6 +95,7 @@ const getAwfulPeople = () => {
     return persons;
 }
 
+// calculates average of an array of persons. It only accesses the age property
 const getAverageAge = (persons) => {
     const label = "Calculating average age"
     console.time(label);
@@ -107,6 +116,7 @@ const runCalculations = () => {
     getAverageAge(awful);
 }
 
+// compares generating of full objects in one expression, and piecemeal generation of the same objects
 const constructionDifferences = () => {
     (() => {
         const label = "Creating with full objects";
@@ -144,11 +154,14 @@ const constructionDifferences = () => {
     })();
 }
 
-
+// compares execution with a single all-purpose method vs execution by separate method per data type
+// note that this example needs to run warm vis-a-vis the getNicePeople call
+// otherwise the optimization of that call will heavily skew the results
 const morphicDemos = () => {
     (() => {
         const label = "Polymorphic add";
         console.time(label);
+        // just one function for adding all types of data
         const add = (x, y) => x + y;
         const nices = getNicePeople();
         const results = nices.map(p => ({
@@ -161,6 +174,7 @@ const morphicDemos = () => {
     (() => {
         const label = "Monomorphic add";
         console.time(label);
+        // identical functions, but one is ONLY used to add numbers, and the other is used to add strings
         const addNumber = (x, y) => x + y;
         const addString = (x, y) => x + y;
         const nices = getNicePeople();

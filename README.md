@@ -252,6 +252,13 @@ ${order.description === undefined ? "No description" : order.description}`);
 }
 ```
 
+### Additional Examples
+
+Additiona examples are available [here](Examples/PerformanceExamples/v8-playground).
+
+You can see a list of the currently used functions of the V8 runtime [here](https://github.com/v8/v8/blob/master/src/runtime/runtime.h). Note that the `OptimizationStatus` enum is also in the same [file](https://github.com/v8/v8/blob/master/src/runtime/runtime.h#L799)
+
+
 ## Resources 📘
 * [w3.org event loops](https://www.w3.org/TR/html52/webappapis.html#event-loops)
 * [html.spec apis](https://html.spec.whatwg.org/dev/webappapis.html#webappapis)

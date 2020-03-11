@@ -265,6 +265,11 @@ You can see a list of the currently used functions of the V8 runtime [here](http
 * [html.spec event loops](https://html.spec.whatwg.org/multipage/webappapis.html#event-loops)
 * [System for visualizing javascript ( a bit older version but it works with ES5 )](http://latentflip.com/loupe)
 
+## Contact
+You can find us on twitter at:
+* @swekster
+* @dragancodes
+
 ## Special thanks 🎈
 Special thanks to: 
 * **Jovana Shishkovska** for the amazing designs

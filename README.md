@@ -12,6 +12,7 @@ To look inside the inner works of a javascript execution we must ask our selves:
 ```js
 function sayHello(name, isAlert){
     let text = `Hello ${name}`;
+    // If isAlert is true, the stack will wait until the alert box is closed, and then continue
     if(isAlert === true) {
         alert(text);
         return;
@@ -33,10 +34,6 @@ first();
 ![Example 1](https://github.com/Drakso/DarkSecretsOfTheEventLoop/blob/master/img/EventLoop01.gif?raw=true)
 ### Blocked stack
 ```js
-function fibonacci(num){
-    if (num < 2) return num;
-    return fibonacci(num - 1) + fibonacci(num - 2);
-}
 function fibonacci(num){
     if (num < 2) return num;
     return fibonacci(num - 1) + fibonacci(num - 2);
